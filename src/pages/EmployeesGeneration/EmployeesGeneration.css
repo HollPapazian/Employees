@@ -1,0 +1,12 @@
+.generator-card {
+  width: 341px;
+  margin: auto;
+}
+
+@media screen and (max-width: 355px) {
+  .generator-card {
+    width: stretch;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}

@@ -1,0 +1,24 @@
+.salary_statistic-card {
+  width: 446px;
+  margin: auto;
+}
+
+.range_list {
+  margin-bottom: 1rem;
+}
+
+
+@media screen and (max-width: 465px) {
+  .salary_statistic-card {
+    width: stretch;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .salary_statistic-card button {
+    margin-bottom: 1rem;
+  }
+
+}

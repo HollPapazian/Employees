@@ -1,0 +1,21 @@
+.nav-item {
+  margin-left:20px;
+}
+
+.navbar-brand {
+  margin-left:40px;
+}
+
+.navbar {
+  margin-bottom: 10px;
+}
+
+.nav-link.active {
+  color: #fff;
+}
+
+@media (max-width: 992px) {
+  .nav-item, .navbar-brand {
+    margin-left:0;
+  }
+}

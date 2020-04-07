@@ -1,0 +1,27 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
+body, html {
+  padding-top: 0;
+  width: 100%;
+}
+
+.custom-range::-webkit-slider-thumb {
+  background: gray;
+}
+
+.custom-range::-moz-range-thumb {
+  background: gray;
+}
+
+.custom-range::-ms-thumb {
+  background: gray;
+}
+
+input[type=text].isinvalid {
+  border-color: #dc3545;
+}
+
+label.isinvalid {
+  color: #dc3545;
+}

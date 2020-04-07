@@ -1,0 +1,77 @@
+/* .table-responsive {
+  height:400px;
+  overflow:auto;
+}  */
+.table-employees thead tr:nth-child(1) th{
+  background: white; 
+  position: sticky;
+  top: -1px;
+  z-index: 10;
+}
+
+.table-employees{
+  width: 100%;
+  max-height: 400px;
+  overflow: auto;
+  margin: auto;
+}
+
+.employees-form{
+  width: 700px;
+  margin: auto;
+}
+
+.employees-card {
+  width: 900px;
+  margin: auto;
+}
+
+.employees-card .alert {
+  margin-bottom: inherit;
+}
+
+.table-employees table{
+  margin-bottom: inherit;
+}
+
+.employees-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: auto;
+}
+
+tbody i {
+  cursor: pointer;
+}
+
+thead i {
+  cursor: inherit;
+}
+
+.employees-page-header i {
+  margin-right: 10px;
+}
+
+.employees-page-header button {
+  margin-bottom: 10px;
+}
+
+
+
+@media screen and (max-width: 900px) {
+  .employees-card {
+    width: stretch;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .employees-form{
+    width: stretch;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
