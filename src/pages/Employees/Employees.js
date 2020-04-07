@@ -72,27 +72,34 @@ export default class Employees extends React.Component {
             }
           </div>
         </div>
-        <Card label='All emloyees' className='employees-card'>
+        
         {
+          // if
           this.state.showAddForm ?
-          <EmployeeForm addFunc={this.addEmployee} /> :
+          // true
+          <Card label='All emloyees' className='employees-form'><EmployeeForm addFunc={this.addEmployee} /></Card> :
+          // false
           (
             // render Table or Alert if employees is empty
-            this.props.employees.length > 0 ?
-            <Table 
-              className="table-employees" 
-              keyForRows = {obj => obj.id}
-              body={this.props.employees.map(item=>{ 
-                item = {...item};
-                item.func=<i className='fa fa-trash' onClick={this.removeHandler.bind(this, item.id)}></i>; 
-                return item; 
-              })}
-              header={['ID','e-mail', 'Name', 'Gender', 'Salary', 'Title', <i className='fa fa-trash'></i>]}
-            /> :
-            <div className="alert alert-info" role="alert">No employes in db</div>
+            <Card label='All emloyees' className='employees-card'>
+              {
+                this.props.employees.length > 0 ?
+                <Table 
+                  className="table-employees" 
+                  keyForRows = {obj => obj.id}
+                  body={this.props.employees.map(item=>{ 
+                    item = {...item};
+                    item.func=<i className='fa fa-trash' onClick={this.removeHandler.bind(this, item.id)}></i>; 
+                    return item; 
+                  })}
+                  header={['ID','e-mail', 'Name', 'Gender', 'Salary', 'Title', <i className='fa fa-trash'></i>]}
+                /> :
+                <div className="alert alert-info" role="alert">No employes in db</div>
+              }
+            </Card>
           )
+
         }
-        </Card>
       </>
     )
   }
