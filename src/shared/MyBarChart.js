@@ -12,8 +12,9 @@ import {
 } from "recharts";
 
 export default function SalaryBarChart (props) {
+  const height = 60 * props.data.length + 55;
   return (
-    <div style={{width:'100%', height:`${60 * props.data.length}px`}}>
+    <div style={{width:'100%', height:`${height}px`}}>
       <ResponsiveContainer height="100%">
         <BarChart 
           data={props.data} 
@@ -21,7 +22,7 @@ export default function SalaryBarChart (props) {
           margin={props.margin}
         >
           <XAxis type="number" allowDecimals={false}/>
-          <YAxis type="category" dataKey="name" tickMargin='10'/>
+          <YAxis type="category" dataKey="name" tickMargin={5}/>
           <CartesianGrid horizontal={false}/>
           <Tooltip/>
           <Legend payload={[{ value: props.legendLabel, type: 'line' }]} align='center'/>

@@ -2,7 +2,7 @@ import React from 'react';
 import _ from 'lodash';
 
 import Card from '../../shared/Card'
-import Table from '../../shared/Table'
+// import Table from '../../shared/Table'
 import SalaryBarChart from '../../shared/MyBarChart'
 
 import './TitleStatistics.css'
